@@ -25,8 +25,32 @@ parenthsiseWords3 s = unwords $ map parenthsiseWord (words s)
 main4 = print $ parenthsiseWords3 "I  do    care  now"
 
 
+
+-- more sections examples
 x `f` y = unwords [x,y] 
 
 main5 = f "Hi" "there!!!"
 
 main6 = "Hey" `f` "there!!!"
+
+
+leftSection = ("try" `f`)
+
+rightSection = (`f` "man")
+
+main7 =  leftSection $ rightSection "me"
+
+
+-- supplying arguments to functions 
+
+params3 x y z = x ++ " " ++ y ++" " ++z
+
+params2 = params3 "How" 
+
+main8 = params2 "you" "doing???" 
+
+params1 = params2 "you"
+
+main9 = params1 "doing???"
+
+params0 = params1 "doing??" 
