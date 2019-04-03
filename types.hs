@@ -47,4 +47,34 @@ main3 = do
        print $ take 20 l1
        print l2      
 
--- tuples                  
+-- tuples
+
+t0 :: (Int, Int)
+t0 = (69,96)
+
+t1 :: (String, Int, Double)
+t1  = ("something", 8, 3.123)
+
+t2 :: ([Int],([String], (Int, Float)))
+t2 = ([1..4], (["1..4","sdf"], (1234, 1234.1234)))
+
+main4 = do
+        print t0
+        print t1
+        print t2
+
+--functions
+
+f0 :: String -> Int
+f0 = length
+
+f1 :: String -> (String, Int)
+f1 x = (x, length x)
+
+f2 :: [String] -> [(String, Int)]
+f2 = map f1
+
+main5 = do
+        print $ f0 "1234567890"
+        print $ f1 "0987654321"   
+        print $ f2 ["HEYYY", "Maaaan"]
