@@ -1,4 +1,4 @@
-main = do putStrLn "Input the number to check for armstrong number"
+    main = do putStrLn "Input the number to check for armstrong number"
           x <- getLine
           let y = (read x :: Int)
 
