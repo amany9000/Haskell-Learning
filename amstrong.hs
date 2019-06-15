@@ -14,4 +14,8 @@ forSubstitute 0 = 0
 forSubstitute n = forSubstitute (quot n 10) + ((mod n 10)^3)
 
 
---main1 = print $ forSubstitute 371                     
+absolute x
+  | x < 0 = -x
+  | otherwise = x
+
+main2 = print (-1,absolute (-1))
